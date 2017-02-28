@@ -1,0 +1,34 @@
+
+#ifndef DISJOINTSET_H
+#define DISJOINTSET_H
+
+struct elements{
+ int ID;
+ int rank;
+ int itsParent;
+ int size;
+ int itsParentRank;
+};
+
+
+class universe{
+
+ public:
+	universe(int numElements);
+	~universe();
+	void joinNodes(int, int);
+	void assignParentRank(int numVertices);
+	int findParentOf(int inputNode);
+	int size(int x) { return universeElements[x].size; }
+ 	int numberOfSets() { return totalNumOfElements; }
+	int returnParentOf(int inputNode) { return universeElements[inputNode].itsParent;}
+	int returnParentRankOf(int inputNode) { return universeElements[inputNode].itsParentRank;}
+	int returnNodeID(int inputNode) { return universeElements[inputNode].ID; }
+
+ private:
+	elements* universeElements;
+	int totalNumOfElements;
+
+};
+
+#endif
