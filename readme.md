@@ -10,10 +10,10 @@
 
 # Compiling
 
-''mkdir bin''
+``mkdir bin``
 
-''cd bin''
+``cd bin``
 
-''cmake ..''
+``cmake ..``
 
-''make''
+``make``
